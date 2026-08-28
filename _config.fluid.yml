@@ -70,6 +70,7 @@ navbar:
     alpha: 0.86
   menu:
     - { name: "Home", link: "/", icon: "iconfont icon-home-fill" }
+    - { name: "Projects", link: "/projects/", icon: "iconfont icon-code" }
     - { name: "Writing", link: "/notes/", icon: "iconfont icon-archive-fill" }
     - { name: "About", link: "/about/", icon: "iconfont icon-user-fill" }
 
@@ -106,7 +107,7 @@ index:
   banner_mask_alpha: 0.2
   slogan:
     enable: true
-    text: "Writing on experiments, failures, and systems."
+    text: "记录做过、踩过，以及能够公开复现的工程实践。"
   auto_excerpt:
     enable: true
   post_url_target: _self
@@ -159,12 +160,13 @@ about:
   banner_img: /assets/banner.svg
   banner_img_height: 34
   banner_mask_alpha: 0.2
-  avatar: /assets/avatar.svg
+  avatar: /assets/avatar.jpg
   name: "谭天晔 · Tianye Tan"
   intro: "Computer Science @ ShanghaiTech · Class of 2029"
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/tty627", tip: "GitHub" }
-    - { class: "iconfont icon-mail", link: "mailto:tanty2025@shanghaitech.edu.cn", tip: "Email" }
+    - { class: "iconfont icon-mail", link: "mailto:ttyinzg@gmail.com", tip: "Gmail" }
+    - { class: "iconfont icon-mail", link: "mailto:tanty2025@shanghaitech.edu.cn", tip: "ShanghaiTech Email" }
 
 page:
   banner_img: /assets/banner.svg

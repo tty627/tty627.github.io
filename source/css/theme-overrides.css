@@ -28,7 +28,6 @@
 }
 
 #board {
-  overflow: hidden;
   border: 1px solid rgba(104, 115, 134, 0.18);
   border-radius: 20px;
   box-shadow: 0 18px 50px rgba(31, 41, 55, 0.1);
@@ -104,6 +103,7 @@ input:focus-visible {
 .about-avatar img {
   border: 1px solid rgba(104, 115, 134, 0.24);
   box-shadow: none;
+  object-position: 50% 45%;
 }
 
 .about-name {

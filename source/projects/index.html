@@ -1,0 +1,312 @@
+---
+layout: false
+title: Projects / 项目
+description: 谭天晔的公开项目索引：AI Agent 工具、研究工作流、系统工程、产品原型与课程项目。
+sitemap: false
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="谭天晔的公开项目索引：AI Agent 工具、研究工作流、系统工程、产品原型与课程项目。">
+  <meta name="author" content="Tianye Tan">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects / 项目 · Tianye Tan">
+  <meta property="og:description" content="每个公开仓库，都写清楚它解决什么问题、目前做到哪里，以及还不能声称什么。">
+  <meta property="og:url" content="https://tty627.github.io/projects/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://tty627.github.io/projects/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <title>Projects / 项目 · Tianye Tan</title>
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem("Fluid_Color_Scheme") || localStorage.getItem("portfolio-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Tianye Tan home">
+        <span class="brand-mark" aria-hidden="true">TY</span>
+        <span class="brand-name">Tianye Tan</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/projects/" aria-current="page">Projects</a>
+        <a href="/notes/">Writing</a>
+        <a href="/about/">About</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero shell" aria-labelledby="projects-title">
+      <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> Project index / 项目索引</p>
+      <h1 id="projects-title">每个公开仓库，都写清楚它的状态与边界。</h1>
+      <p>这里收录截至 2026-08-28 的全部公开仓库：10 个原创仓库和 1 个 fork。它们不被包装成同一种“完成品”——开发预览、MVP、设计补丁、课程作业和实验会分别说明。</p>
+      <div class="page-meta mono" aria-label="Repository overview">
+        <span>10 original repositories</span>
+        <span>1 fork / extension</span>
+        <span>Last reviewed 2026-08-28</span>
+      </div>
+    </section>
+
+    <nav class="catalog-jump shell" aria-label="Project categories">
+      <a href="#research-tools">AI &amp; research tools</a>
+      <a href="#products-experiments">Products &amp; experiments</a>
+      <a href="#systems-coursework">Systems &amp; coursework</a>
+      <a href="#site-fork">Site &amp; fork</a>
+    </nav>
+
+    <section class="catalog-section shell" id="research-tools" aria-labelledby="research-tools-title">
+      <div class="catalog-heading">
+        <p class="section-kicker">01 / AI &amp; research tools</p>
+        <h2 id="research-tools-title">从证据整理到 Agent 轨迹控制。</h2>
+      </div>
+      <div class="catalog-grid">
+        <article class="catalog-card catalog-card-featured">
+          <div class="catalog-topline">
+            <span class="status status-preview">Development preview</span>
+            <span class="mono">Python · React · TypeScript</span>
+          </div>
+          <h3>Octopus</h3>
+          <p class="catalog-summary">在本地资料中检索原文，把命中定位到可核验的位置，再整理成带引用的研究资料包。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>PDF、Office、图片、文本与 ZIP 检索；证据位置、引用元数据、来源变化追踪与资料包导出。</dd></div>
+            <div><dt>Boundary</dt><dd><code>2.1.0.dev1</code> 是未签名 Windows 开发预览；签名、发布矩阵与真实研究用户验收仍是正式版门槛。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>FastAPI</li><li>SQLite / FTS5</li><li>OCR</li><li>Local-first</li></ul>
+            <a href="https://github.com/tty627/octopus" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+
+        <article class="catalog-card">
+          <div class="catalog-topline">
+            <span class="status status-mvp">Audit MVP</span>
+            <span class="mono">Python · FastAPI</span>
+          </div>
+          <h3>Relay Model Auditor</h3>
+          <p class="catalog-summary">为 OpenAI 兼容端点构建的黑盒审计 MVP，保留原始证据、哈希与审计链路。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>Mock 闭环、Web 控制台、批量对比、SQLite / PostgreSQL 审计记录与 Docker Compose。</dd></div>
+            <div><dt>Boundary</dt><dd>尚无经过官方真值校准的 threshold policy；当前身份结论安全降级为 <code>unverifiable</code>。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>SQLAlchemy</li><li>PostgreSQL</li><li>Docker</li></ul>
+            <a href="https://github.com/tty627/llm-relay-auditor" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+
+        <article class="catalog-card">
+          <div class="catalog-topline">
+            <span class="status status-active">Plugin</span>
+            <span class="mono">TypeScript · React</span>
+          </div>
+          <h3>Trajectory Workspace Plugin</h3>
+          <p class="catalog-summary">为 DeepSeek Harness Web 的 Agent 运行轨迹增加可停靠、浮动和可调整尺寸的工作区。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>左右停靠、浮动窗口、宽度调整、窄布局适配与按会话保存工作区状态。</dd></div>
+            <div><dt>Boundary</dt><dd>需要宿主提供 view-supplement 契约；它是 DSH 插件和预构建 bundle，不是独立网页应用。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>DSH</li><li>Cordis</li><li>Responsive UI</li></ul>
+            <a href="https://github.com/tty627/trajectory-workspace-plugin" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+
+        <article class="catalog-card">
+          <div class="catalog-topline">
+            <span class="status status-patch">Design + patches</span>
+            <span class="mono">Agent trajectories</span>
+          </div>
+          <h3>DSH Trajectory Control</h3>
+          <p class="catalog-summary">探索从中间决策点分支、插入新指令并继续运行的轨迹控制方式。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>运行时核查、设计文档，以及 replacement、ignorable、轨迹行分支和插话续跑的早期补丁集。</dd></div>
+            <div><dt>Boundary</dt><dd>README 标注 T-1 / T0 已完成；标注、血缘树、原地回滚、断点与导出重放等 T1–T3 尚未开始。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>Architecture</li><li>Git patches</li><li>Session API</li></ul>
+            <a href="https://github.com/tty627/dsh-trajectory-control" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalog-section shell" id="products-experiments" aria-labelledby="products-experiments-title">
+      <div class="catalog-heading">
+        <p class="section-kicker">02 / Products &amp; experiments</p>
+        <h2 id="products-experiments-title">产品原型和可复现的实验。</h2>
+      </div>
+      <div class="catalog-grid">
+        <article class="catalog-card">
+          <div class="catalog-topline">
+            <span class="status status-experiment">Research experiment</span>
+            <span class="mono">Python</span>
+          </div>
+          <h3>crypto-quant</h3>
+          <p class="catalog-summary">围绕突破策略、多标的统一账户和参数搜索构建的加密永续合约回测实验。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>Donchian Breakout、趋势过滤、资金费率与成本处理、网格 / 自动参数搜索和 Plotly 可视化。</dd></div>
+            <div><dt>Boundary</dt><dd>这是策略研究工具，不是收益承诺或可直接投入实盘的交易系统；仓库未公开实际数据与结果输出。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>pandas</li><li>NumPy</li><li>Plotly</li><li>pytest</li></ul>
+            <a href="https://github.com/tty627/crypto-quant" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+
+        <article class="catalog-card">
+          <div class="catalog-topline">
+            <span class="status status-mvp">Full-stack MVP</span>
+            <span class="mono">React · Node.js</span>
+          </div>
+          <h3>MatchUs</h3>
+          <p class="catalog-summary">面向校园活动与临时小组的社交原型，通过延迟揭示身份在可发现性与安全边界之间做取舍。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>学校邮箱验证、活动参与、签到与评价、群聊、通知、论坛、举报和管理员审核。</dd></div>
+            <div><dt>Boundary</dt><dd>仓库展示的是全栈 MVP；目前没有公开的线上部署、测试套件或 CI 证据。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>Express</li><li>PostgreSQL</li><li>JWT</li><li>Vite</li></ul>
+            <a href="https://github.com/tty627/MatchUs" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalog-section shell" id="systems-coursework" aria-labelledby="systems-coursework-title">
+      <div class="catalog-heading">
+        <p class="section-kicker">03 / Systems &amp; coursework</p>
+        <h2 id="systems-coursework-title">把机制写进代码，而不只停在概念上。</h2>
+      </div>
+      <div class="catalog-grid">
+        <article class="catalog-card catalog-card-featured">
+          <div class="catalog-topline">
+            <span class="status status-course">Team coursework</span>
+            <span class="mono">C · x86</span>
+          </div>
+          <h3>Pintos</h3>
+          <p class="catalog-summary">从调度和系统调用一路做到虚拟内存与文件系统，用教学内核理解操作系统机制如何真正落到代码里。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>优先级调度与 donation、用户程序、demand paging、swap / mmap、可增长文件、目录与 64-sector buffer cache。</dd></div>
+            <div><dt>Boundary</dt><dd>这是团队课程项目；仓库保留 project1–project4 分支和设计文档，但没有公开 CI，不额外声称全部测试通过。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>Kernel</li><li>Concurrency</li><li>Virtual memory</li><li>File system</li></ul>
+            <a href="https://github.com/tty627/pintos" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+
+        <article class="catalog-card">
+          <div class="catalog-topline">
+            <span class="status status-course">Coursework</span>
+            <span class="mono">C · ANSI terminal</span>
+          </div>
+          <h3>CS100 Tank</h3>
+          <p class="catalog-summary">在课程终端框架上完成的坦克战游戏，把碰撞、对象生命周期和差分渲染组合成完整战斗循环。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>随机地图、可破坏墙体、敌方 AI、生命与核心热量、HUD、胜负判定，以及 GCC / Clang 编译 CI。</dd></div>
+            <div><dt>Boundary</dt><dd>实机运行仅由 README 确认于 macOS arm64；Linux / Windows 仍应在目标环境验证。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>GCC</li><li>Clang</li><li>Game loop</li></ul>
+            <a href="https://github.com/tty627/CS100-Tank" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+
+        <article class="catalog-card">
+          <div class="catalog-topline">
+            <span class="status status-course">Coursework</span>
+            <span class="mono">C++</span>
+          </div>
+          <h3>CS100 Zombie</h3>
+          <p class="catalog-summary">在课程 PvZ 风格框架上实现反向玩法：选择僵尸、管理阳光并逐阶段突破植物防线。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>三类僵尸、五阶段推进、卡牌与冷却、植物交互、资源管理、失败判定和对象生命周期调度。</dd></div>
+            <div><dt>Boundary</dt><dd>这是课程提交包，仍需放回原始工程模板才能构建，不是独立可运行产品。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>State machine</li><li>freeglut</li><li>SOIL</li></ul>
+            <a href="https://github.com/tty627/cs100-hw8-zombie" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="catalog-disclosure">课程仓库仅用于作品展示与学习记录。公开可见不代表允许复制、改写、代写或用于课程提交；具体使用还应遵守课程规则、学术诚信与素材许可。</p>
+    </section>
+
+    <section class="catalog-section shell" id="site-fork" aria-labelledby="site-fork-title">
+      <div class="catalog-heading">
+        <p class="section-kicker">04 / Site &amp; fork</p>
+        <h2 id="site-fork-title">站点本身，以及明确标出的 fork。</h2>
+      </div>
+      <div class="catalog-grid">
+        <article class="catalog-card">
+          <div class="catalog-topline">
+            <span class="status status-live">Live</span>
+            <span class="mono">Hexo · CSS · JavaScript</span>
+          </div>
+          <h3>tty627.github.io</h3>
+          <p class="catalog-summary">你正在浏览的个人主页与技术笔记源代码。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>自定义作品首页、Fluid 内容页、深浅色主题、SEO、站内链接检查与 GitHub Pages 自动发布。</dd></div>
+            <div><dt>Boundary</dt><dd>项目描述会随公开工作持续更新；页面不代替仓库 README、测试结果或正式发布说明。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>Hexo 8</li><li>Fluid</li><li>GitHub Actions</li></ul>
+            <a href="https://github.com/tty627/tty627.github.io" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+
+        <article class="catalog-card catalog-card-fork">
+          <div class="catalog-topline">
+            <span class="status status-fork">Fork / extension</span>
+            <span class="mono">TypeScript</span>
+          </div>
+          <h3>llm-fingerprint-detector</h3>
+          <p class="catalog-summary">OpenAI 兼容端点的单 token 行为分布比较库与 CLI；该仓库明确作为 fork 展示，不计入原创项目。</p>
+          <dl class="catalog-facts">
+            <div><dt>Built</dt><dd>零运行时依赖的采样、归一化和 Jensen–Shannon 距离比较流程，并被 Relay Model Auditor 集成。</dd></div>
+            <div><dt>Boundary</dt><dd>当前 <code>one-token/v1</code> 只产生探索性距离，不能单独证明模型身份、替换、欺诈或供应商来源。</dd></div>
+          </dl>
+          <div class="catalog-footer">
+            <ul class="tech-list" aria-label="Technologies"><li>Node.js</li><li>CLI</li><li>JSD</li><li>OpenAI-compatible APIs</li></ul>
+            <a href="https://github.com/tty627/llm-fingerprint-detector" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects-cta shell" aria-labelledby="projects-cta-title">
+      <div>
+        <p class="section-kicker">Writing / 技术记录</p>
+        <h2 id="projects-cta-title">项目之外，我也记录设计判断和失败复盘。</h2>
+      </div>
+      <a class="button button-primary" href="/notes/">Read the notes <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© 2026 Tianye Tan</p>
+    <p><a href="https://github.com/tty627" target="_blank" rel="noopener">github.com/tty627 ↗</a></p>
+  </footer>
+
+  <script src="/js/portfolio.js" defer></script>
+</body>
+</html>
