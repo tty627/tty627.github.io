@@ -1,29 +1,37 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "tty627-github-pages",
+  "version": "1.0.0",
   "private": true,
+  "description": "Tianye Tan's portfolio and technical notes",
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "build": "cross-env TZ=Asia/Shanghai hexo generate --bail",
+    "check": "npm run clean && npm run build && npm run check:links",
+    "check:links": "node tools/check-links.mjs",
+    "clean": "cross-env TZ=Asia/Shanghai hexo clean",
+    "dev": "cross-env TZ=Asia/Shanghai hexo server --ip 0.0.0.0",
+    "server": "cross-env TZ=Asia/Shanghai hexo server"
+  },
+  "engines": {
+    "node": ">=20.19"
   },
   "hexo": {
     "version": "8.1.2"
   },
   "dependencies": {
     "hexo": "^8.0.0",
-    "hexo-deployer-git": "^4.0.0",
+    "hexo-generator-alias": "^1.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
-    "hexo-generator-search": "^2.4.3",
+    "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^5.0.0",
+    "hexo-renderer-marked": "^7.0.1",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-fluid": "^1.9.9",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-fluid": "^1.9.9"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }

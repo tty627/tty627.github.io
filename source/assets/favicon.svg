@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TY monogram">
+  <rect width="64" height="64" rx="16" fill="#0b1220"/>
+  <circle cx="50" cy="14" r="4" fill="#20b8a6"/>
+  <text x="32" y="40" fill="#f7f3e9" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="23" font-weight="700" text-anchor="middle">TY</text>
+</svg>

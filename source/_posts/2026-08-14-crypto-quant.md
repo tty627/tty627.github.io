@@ -1,80 +1,59 @@
 ---
-title: crypto-quant：加密货币永续合约回测小工具
-date: 2026-08-14 00:00:00
-tags: [Python, 量化]
-categories: [项目]
+title: 先验证信号，再调参数：一次加密货币策略实验复盘
+date: 2026-08-14 12:00:00
+updated: 2026-08-28 12:00:00
+permalink: notes/crypto-quant/
+alias:
+  - 2026/08/13/2026-08-14-crypto-quant/index.html
+  - 2026/08/14/crypto-quant/index.html
+tags: [Python, 量化, 回测]
+categories: [实验复盘]
+description: 与其继续优化一个没有统计优势的信号，不如先验证信号质量、成本、杠杆与样本外稳定性。
 ---
 
-[crypto-quant](https://github.com/tty627/crypto-quant) 是一个用于加密货币永续合约回测的 Python 项目，核心是突破策略（Breakout）与参数优化。这篇文章简单介绍一下它的功能和用法。
+[crypto-quant](https://github.com/tty627/crypto-quant) 最初是一个加密货币永续合约回测项目。我实现了 Donchian Breakout、趋势过滤、多标的统一资金账户、成本与资金费率处理、参数搜索和 Plotly 可视化。
 
-## 特性
+真正有价值的结果不是某条漂亮的权益曲线，而是几次失败迫使我改变了实验顺序：**先判断信号有没有信息，再讨论仓位和参数。**
 
-- Donchian Breakout + 趋势过滤回测
-- 多标的统一资金账户回测
-- 参数网格优化与自动搜索
-- Plotly 可视化输出（权益曲线、热力图等）
-- GitHub Actions CI（测试 + 打包检查）
-- GitHub Actions Release（macOS / Windows / Linux，多架构）
+## 第一个错误：直接优化没有优势的信号
 
-## 环境要求
+在当前数据、成本假设和实现下，15 分钟 Donchian 突破的止盈命中率约为 9%–26%，低于 1:2.5 风险收益比对应的 28.6% 随机基线，Profit Factor 也接近 1。基于 pivot 的 SMC 信号在同一时间尺度上同样没有表现出正期望。
 
-- Python 3.11+
+这说明优化器面对的不是“参数还没找对”，而是信号本身没有稳定优势。继续扩大搜索空间，只会更容易挑中样本噪声。
 
-## 快速开始
+更合理的流程是：
 
-```bash
-pip install -e ".[dev]"
-```
+1. 去掉杠杆和复杂仓位，先检查纯信号的胜率、盈亏比和 Profit Factor；
+2. 加入手续费、滑点和资金费率，确认优势没有被成本吃掉；
+3. 再进行参数搜索，并把验证集和测试集留在优化过程之外；
+4. 最后才讨论仓位、杠杆和组合层面的风险。
 
-### 运行测试
+## 第二个错误：把杠杆当成收益放大器
 
-```bash
-pytest
-```
+4 小时时间尺度在当前样本中比 15 分钟更有延续性，部分参数组合的信号 Profit Factor 达到约 1.4–1.8。但在 33 倍杠杆下，即使信号具有一定优势，连续亏损也会让所有测试配置发生清算。
 
-### 运行回测
+假设单笔止损为 1%、使用 50% 资金开仓，33 倍杠杆会把一次止损放大为接近 16.5% 的权益损失。一个并不罕见的五连亏就足以摧毁账户。
 
-```bash
-python scripts/run_backtest.py
-```
+因此，杠杆不能修复弱信号。它只会同时放大优势、噪声和模型错误。
 
-### 运行参数优化
+## 第三个错误：把样本内结果当成结论
 
-```bash
-# 快速扫描
-python scripts/run_optimization.py
+4 小时结果目前只能说明“值得继续验证”，不能证明策略已经有效。参数网格、时间尺度和标的都是在观察数据后选择的，因此存在数据窥探与选择偏差。
 
-# 完整网格
-python scripts/run_optimization.py --full
-```
+后续至少需要补齐：
 
-### 自动参数搜索
+- 严格的 train / validation / test 划分；
+- walk-forward 与跨市场验证；
+- 与简单基准策略的对比；
+- 参数邻域稳定性，而不是只汇报最优点；
+- 更保守的滑点、流动性与清算假设。
 
-```bash
-python scripts/auto_optimize.py --scope combined --max-trials 500
-```
+## 我从这次实验中保留的东西
 
-## 目录结构
+项目仍然保留回测引擎、统一资金账本、参数搜索、测试和可视化，因为这些工程组件可以继续服务更严谨的实验。但现在我会先问：
 
-```text
-src/crypto_quant/
-  backtest/        # 回测引擎、指标与账本
-  data/            # K线与资金费率数据加载/缓存
-  optimization/    # 网格优化与自动搜索
-  strategies/      # 策略实现
-  visualization/   # Plotly 图表输出
-scripts/           # 可直接运行的任务脚本
-tests/             # 单元测试
-```
+> 这个信号为什么可能包含信息？如果去掉仓位和杠杆，它还剩下什么？
 
-## CI / Release
+如果答案不清楚，更多参数通常不会带来更多可信度。
 
-- **CI 工作流**（`.github/workflows/ci.yml`）：PR 与分支 push 自动执行测试与打包检查
-- **Release 工作流**（`.github/workflows/release.yml`）：tag（`v*`）触发跨平台构建并自动发布 GitHub Release
-
-## 说明
-
-- 仓库会忽略 `data/` 与 `results/` 下的实际输出内容，仅保留 `.gitkeep`
-- 策略约束与功能规范见仓库中的 `SPEC.md`
-
-后续打算继续完善策略模块和回测引擎，欢迎到 [GitHub 仓库](https://github.com/tty627/crypto-quant) 交流。
+仓库中的结果仅用于研究与学习，不构成投资建议，也没有经过实盘资金验证。

@@ -1,24 +1,24 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
 # Site
-title: tty627's Blog
-subtitle: ''
-description: 'tty627 的个人博客'
+title: 谭天晔 · Tianye Tan
+subtitle: Verifiable AI · Research Tools · Systems Engineering
+description: 谭天晔（tty627）的个人主页，记录 LLM Agent 评测、研究工具、系统工程与量化实验。
 keywords:
-author: tty627
+  - Tianye Tan
+  - 谭天晔
+  - LLM evaluation
+  - developer tools
+  - ShanghaiTech
+author: Tianye Tan
 language: zh-CN
-timezone: 'Asia/Shanghai'
+timezone: Asia/Shanghai
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://tty627.github.io
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+url: https://tty627.github.io/
+root: /
+permalink: notes/:title/
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false
+  trailing_html: false
 
 # Directory
 source_dir: source
@@ -30,77 +30,65 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+# Keep GitHub Pages from running Jekyll over generated assets.
+include:
+  - .nojekyll
+exclude:
+ignore:
+
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: false
 external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ''
+  enable: true
+  field: site
+  exclude: tty627.github.io
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
-future: true
+future: false
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: "  "
   wrap: true
   hljs: false
-prismjs:
-  preprocess: true
-  line_number: true
-  tab_replace: ''
 
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
+# Publish the chronological post index under /notes/; / is a custom portfolio.
 index_generator:
-  path: ''
+  path: notes
   per_page: 10
   order_by: -date
 
-# Category & Tag
-default_category: uncategorized
+# Taxonomy
+default_category: Notes
 category_map:
 tag_map:
 
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+# Metadata and dates
 meta_generator: true
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+time_format: HH:mm
+# CI checkout time must not masquerade as an editorial update.
+updated_option: empty
 
 # Pagination
-## Set per_page to 0 to disable pagination
 per_page: 10
 pagination_dir: page
 
-# Include / Exclude file(s)
-## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
+# Preserve useful URLs while the young site adopts stable slugs.
+alias:
+  2026/08/12/Hello-World/index.html: notes/index.html
+  2026/08/13/2026-08-14-github-projects/index.html: /#work
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
+sitemap:
+  path: sitemap.xml
+  template: ./sitemap-template.xml
+  rel: false
+  tags: false
+  categories: false
+
 theme: fluid
-
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: https://github.com/tty627/tty627.github.io.git
-  branch: gh-pages

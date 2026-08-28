@@ -1,0 +1,131 @@
+:root {
+  --tty-accent: #08766f;
+  --tty-accent-dark: #43d5c3;
+}
+
+[data-user-color-scheme="dark"] {
+  --tty-accent: var(--tty-accent-dark);
+}
+
+.header-inner {
+  background-color: #0c1422 !important;
+  background-image:
+    radial-gradient(circle at 72% 28%, rgba(32, 184, 166, 0.2), transparent 28%),
+    linear-gradient(135deg, #0a101b 0%, #16253b 58%, #101827 100%) !important;
+}
+
+.navbar {
+  box-shadow: none;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  letter-spacing: 0;
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+}
+
+#board {
+  overflow: hidden;
+  border: 1px solid rgba(104, 115, 134, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 18px 50px rgba(31, 41, 55, 0.1);
+}
+
+[data-user-color-scheme="dark"] #board {
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-user-color-scheme]) {
+    --tty-accent: var(--tty-accent-dark);
+  }
+
+  :root:not([data-user-color-scheme]) #board {
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+  }
+}
+
+.fluid-skip-link {
+  position: fixed;
+  z-index: 2000;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fffdf8;
+  color: #111827;
+  font-weight: 700;
+  transform: translateY(-160%);
+  transition: transform 160ms ease;
+}
+
+.fluid-skip-link:focus {
+  transform: translateY(0);
+}
+
+.fluid-sr-only {
+  position: absolute !important;
+  display: block !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--tty-accent);
+  outline-offset: 4px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  letter-spacing: -0.025em;
+}
+
+.post-content blockquote {
+  border-left-color: var(--tty-accent);
+}
+
+.post-content a {
+  text-underline-offset: 3px;
+}
+
+.about-avatar img {
+  border: 1px solid rgba(104, 115, 134, 0.24);
+  box-shadow: none;
+}
+
+.about-name {
+  letter-spacing: -0.025em;
+}
+
+.index-card {
+  border-bottom: 1px solid rgba(104, 115, 134, 0.18);
+}
+
+.index-card:last-child {
+  border-bottom: 0;
+}
+
+.footer-inner {
+  font-size: 13px;
+}
+
+@media (max-width: 767px) {
+  #board {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+}
