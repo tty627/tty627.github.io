@@ -94,7 +94,7 @@ open_graph:
   twitter_card: summary
 
 footer:
-  content: '© 2026 Tianye Tan · Built as a record of work, evidence, and lessons.'
+  content: '© 2026 Tianye Tan'
   statistics:
     enable: false
   beian:
@@ -107,7 +107,7 @@ index:
   banner_mask_alpha: 0.2
   slogan:
     enable: true
-    text: "记录做过、踩过，以及能够公开复现的工程实践。"
+    text: "项目和实验记录。"
   auto_excerpt:
     enable: true
   post_url_target: _self
