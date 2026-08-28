@@ -16,7 +16,7 @@
 
   function updateLabel() {
     var next = activeTheme() === "dark" ? "light" : "dark";
-    toggle.setAttribute("aria-label", "Switch to " + next + " theme");
+    toggle.setAttribute("aria-label", next === "dark" ? "切换到深色主题" : "切换到浅色主题");
   }
 
   toggle.addEventListener("click", function () {

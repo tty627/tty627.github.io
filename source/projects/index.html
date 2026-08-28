@@ -9,7 +9,8 @@ sitemap: false
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11110f" media="(prefers-color-scheme: dark)">
   <meta name="description" content="谭天晔的公开项目与代码仓库。">
   <meta name="author" content="Tianye Tan">
   <meta property="og:type" content="website">
@@ -34,20 +35,19 @@ sitemap: false
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">跳到主要内容</a>
 
   <header class="site-header">
-    <nav class="nav shell" aria-label="Primary navigation">
-      <a class="brand" href="/" aria-label="Tianye Tan home">
+    <nav class="nav shell" aria-label="主导航">
+      <a class="brand" href="/" aria-label="返回首页">
         <span class="brand-mark" aria-hidden="true">TY</span>
         <span class="brand-name">Tianye Tan</span>
       </a>
       <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/projects/" aria-current="page">Projects</a>
-        <a href="/notes/">Writing</a>
-        <a href="/about/">About</a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">
+        <a href="/projects/" aria-current="page">项目</a>
+        <a href="/notes/">文章</a>
+        <a href="/about/">关于</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换颜色主题">
           <span aria-hidden="true">◐</span>
         </button>
       </div>
@@ -60,78 +60,71 @@ sitemap: false
       <p>这里列出我的公开仓库。点击项目名称可以查看代码和完整说明。</p>
     </header>
 
-    <section class="repository-list shell" aria-label="GitHub repositories">
+    <section class="repository-list shell" aria-label="GitHub 仓库">
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/octopus" target="_blank" rel="noopener">Octopus</a></h2>
         <p>面向学习和研究的 Windows 本地资料工具。它能搜索 PDF、Office、图片、文本和 ZIP，并把结果定位到原文位置，方便核对和整理引用。</p>
-        <a class="repository-link" href="https://github.com/tty627/octopus" target="_blank" rel="noopener" aria-label="Open Octopus on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/llm-relay-auditor" target="_blank" rel="noopener">Relay Model Auditor</a></h2>
         <p>一个用于检查 OpenAI 兼容 API 的本地工具。它会保存测试结果和历史记录，帮助比较不同端点；现阶段不能仅凭结果断定实际模型身份。</p>
-        <a class="repository-link" href="https://github.com/tty627/llm-relay-auditor" target="_blank" rel="noopener" aria-label="Open Relay Model Auditor on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/trajectory-workspace-plugin" target="_blank" rel="noopener">Trajectory Workspace Plugin</a></h2>
         <p>给 DeepSeek Harness Web 增加一个轨迹面板，可以停靠在页面左右两侧，也可以作为浮动窗口使用，并记住每个会话的布局。</p>
-        <a class="repository-link" href="https://github.com/tty627/trajectory-workspace-plugin" target="_blank" rel="noopener" aria-label="Open Trajectory Workspace Plugin on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/dsh-trajectory-control" target="_blank" rel="noopener">DSH Trajectory Control</a></h2>
         <p>一组面向 DeepSeek Harness 的设计文档和代码补丁，目前可以从轨迹中的某一步创建分支、加入新指令并继续运行。</p>
-        <a class="repository-link" href="https://github.com/tty627/dsh-trajectory-control" target="_blank" rel="noopener" aria-label="Open DSH Trajectory Control on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/pintos" target="_blank" rel="noopener">Pintos</a></h2>
         <p>参与完成的操作系统课程项目，内容包括线程调度、系统调用、虚拟内存和文件系统。</p>
-        <a class="repository-link" href="https://github.com/tty627/pintos" target="_blank" rel="noopener" aria-label="Open Pintos on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/crypto-quant" target="_blank" rel="noopener">crypto-quant</a></h2>
         <p>一个用 Python 写的加密货币永续合约回测项目，包含 Donchian 突破策略、多标的账户、参数搜索和图表输出。</p>
-        <a class="repository-link" href="https://github.com/tty627/crypto-quant" target="_blank" rel="noopener" aria-label="Open crypto-quant on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/MatchUs" target="_blank" rel="noopener">MatchUs</a></h2>
         <p>一个校园活动和临时组队的全栈应用原型，支持学校邮箱注册、活动发布与参与、签到、群聊、评价和举报。</p>
-        <a class="repository-link" href="https://github.com/tty627/MatchUs" target="_blank" rel="noopener" aria-label="Open MatchUs on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/CS100-Tank" target="_blank" rel="noopener">CS100 Tank</a></h2>
         <p>一个用 C 和 ANSI 终端渲染的坦克游戏课程作品，包含随机地图、可破坏墙体、敌方 AI 和生命、热量系统。</p>
-        <a class="repository-link" href="https://github.com/tty627/CS100-Tank" target="_blank" rel="noopener" aria-label="Open CS100 Tank on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/cs100-hw8-zombie" target="_blank" rel="noopener">CS100 Zombie</a></h2>
         <p>基于课程 PvZ 框架完成的反向玩法作业：玩家投放僵尸、使用阳光，逐关突破植物防线。运行时需要原课程工程模板。</p>
-        <a class="repository-link" href="https://github.com/tty627/cs100-hw8-zombie" target="_blank" rel="noopener" aria-label="Open CS100 Zombie on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/tty627.github.io" target="_blank" rel="noopener">tty627.github.io</a></h2>
         <p>这个个人网站的源代码，使用 Hexo 和 Fluid 组织页面，并通过 GitHub Actions 自动部署到 GitHub Pages。</p>
-        <a class="repository-link" href="https://github.com/tty627/tty627.github.io" target="_blank" rel="noopener" aria-label="Open tty627.github.io on GitHub">查看仓库 ↗</a>
       </article>
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/llm-fingerprint-detector" target="_blank" rel="noopener">llm-fingerprint-detector（Fork）</a></h2>
         <p>从 ToseaAI 项目 fork 的 TypeScript 库和命令行工具，用单 token 输出分布比较 OpenAI 兼容端点。结果只能作为探索性参考，不能单独确认模型身份。</p>
-        <a class="repository-link" href="https://github.com/tty627/llm-fingerprint-detector" target="_blank" rel="noopener" aria-label="Open llm-fingerprint-detector on GitHub">查看仓库 ↗</a>
       </article>
     </section>
   </main>
 
   <footer class="footer shell">
     <p>© 2026 Tianye Tan</p>
-    <p><a href="https://github.com/tty627" target="_blank" rel="noopener">github.com/tty627 ↗</a></p>
+    <nav class="footer-links" aria-label="页脚链接">
+      <a href="/about/">关于</a>
+      <a href="https://github.com/tty627" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:ttyinzg@gmail.com">Email</a>
+    </nav>
   </footer>
 
   <script src="/js/portfolio.js" defer></script>

@@ -16,13 +16,29 @@
       generatedTitle.removeAttribute("style");
       generatedTitle.classList.add("fluid-sr-only");
       if (/^\/notes(?:\/page\/\d+)?\/?$/.test(window.location.pathname)) {
-        generatedTitle.textContent = "Writing / 技术笔记";
+        generatedTitle.textContent = "文章";
       }
     }
   }
 
   var postTitle = document.getElementById("seo-header");
   if (postTitle) postTitle.classList.add("fluid-sr-only");
+
+  var navToggle = document.getElementById("navbar-toggler-btn");
+  if (navToggle) navToggle.setAttribute("aria-label", "打开或关闭导航");
+
+  ["color-toggle-btn", "mobile-color-toggle-btn"].forEach(function (id) {
+    var colorToggle = document.querySelector("#" + id + " a");
+    if (colorToggle) colorToggle.setAttribute("aria-label", "切换颜色主题");
+  });
+
+  var currentPath = window.location.pathname;
+  var activeHref = currentPath.indexOf("/notes/") === 0 ? "/notes/" : currentPath;
+  document.querySelectorAll("#navbarSupportedContent a.nav-link[href]").forEach(function (link) {
+    if (link.getAttribute("href") === activeHref) {
+      link.setAttribute("aria-current", "page");
+    }
+  });
 
   var modalTitle = document.querySelector("#modalSearch .modal-title");
   if (modalTitle && !modalTitle.id) modalTitle.id = "ModalLabel";

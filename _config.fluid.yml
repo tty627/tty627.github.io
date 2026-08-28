@@ -9,39 +9,37 @@ fun_features:
   typing:
     enable: false
   progressbar:
-    enable: true
-    height_px: 2
-    color: "#20b8a6"
+    enable: false
 
 dark_mode:
   enable: true
   default: auto
 
 color:
-  body_bg_color: "#f3f1ea"
-  body_bg_color_dark: "#0a101b"
-  navbar_bg_color: "#101827"
-  navbar_bg_color_dark: "#070c14"
-  navbar_text_color: "#f6f2e8"
-  navbar_text_color_dark: "#e6edf5"
-  subtitle_color: "#f6f2e8"
-  subtitle_color_dark: "#e6edf5"
-  text_color: "#172033"
-  text_color_dark: "#d9e1ea"
-  sec_text_color: "#667085"
-  sec_text_color_dark: "#98a6b7"
-  board_color: "#fffdf8"
-  board_color_dark: "#111a29"
-  post_text_color: "#273248"
-  post_text_color_dark: "#d5dde7"
-  post_heading_color: "#111827"
-  post_heading_color_dark: "#f4f7fb"
-  post_link_color: "#08766f"
-  post_link_color_dark: "#43d5c3"
-  link_hover_color: "#a94d00"
-  link_hover_color_dark: "#ffbb66"
-  line_color: "#dfe3e8"
-  line_color_dark: "#2b3748"
+  body_bg_color: "#f7f7f4"
+  body_bg_color_dark: "#11110f"
+  navbar_bg_color: "#f7f7f4"
+  navbar_bg_color_dark: "#11110f"
+  navbar_text_color: "#181816"
+  navbar_text_color_dark: "#f1f1ec"
+  subtitle_color: "#181816"
+  subtitle_color_dark: "#f1f1ec"
+  text_color: "#181816"
+  text_color_dark: "#f1f1ec"
+  sec_text_color: "#6d6e67"
+  sec_text_color_dark: "#9b9c95"
+  board_color: "#f7f7f4"
+  board_color_dark: "#11110f"
+  post_text_color: "#464640"
+  post_text_color_dark: "#cecec7"
+  post_heading_color: "#181816"
+  post_heading_color_dark: "#f1f1ec"
+  post_link_color: "#0b6b5f"
+  post_link_color_dark: "#76c9bc"
+  link_hover_color: "#084f47"
+  link_hover_color_dark: "#91d9cc"
+  line_color: "#dedfd9"
+  line_color_dark: "#2d2e2a"
 
 font:
   font_size: 16px
@@ -66,16 +64,15 @@ navbar:
   blog_title: "Tianye Tan"
   ground_glass:
     enable: true
-    px: 10
-    alpha: 0.86
+    px: 14
+    alpha: 0.92
   menu:
-    - { name: "Home", link: "/", icon: "iconfont icon-home-fill" }
-    - { name: "Projects", link: "/projects/", icon: "iconfont icon-code" }
-    - { name: "Writing", link: "/notes/", icon: "iconfont icon-archive-fill" }
-    - { name: "About", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { name: "项目", link: "/projects/", icon: "iconfont icon-code" }
+    - { name: "文章", link: "/notes/", icon: "iconfont icon-archive-fill" }
+    - { name: "关于", link: "/about/", icon: "iconfont icon-user-fill" }
 
 search:
-  enable: true
+  enable: false
   path: /local-search.xml
   generate_path: /local-search.xml
   field: post
@@ -89,12 +86,15 @@ banner:
 scroll_down_arrow:
   enable: false
 
+scroll_top_arrow:
+  enable: false
+
 open_graph:
   enable: true
   twitter_card: summary
 
 footer:
-  content: '© 2026 Tianye Tan'
+  content: '<div class="fluid-footer-shell"><span>© 2026 Tianye Tan</span><nav aria-label="页脚链接"><a href="/about/">关于</a><a href="https://github.com/tty627" target="_blank" rel="noopener">GitHub</a><a href="mailto:ttyinzg@gmail.com">Email</a></nav></div>'
   statistics:
     enable: false
   beian:
@@ -103,23 +103,23 @@ footer:
 # /notes/ uses Fluid's index layout.
 index:
   banner_img: /assets/banner.svg
-  banner_img_height: 44
-  banner_mask_alpha: 0.2
+  banner_img_height: 24
+  banner_mask_alpha: 0
   slogan:
     enable: true
-    text: "项目和实验记录。"
+    text: "文章"
   auto_excerpt:
     enable: true
   post_url_target: _self
   post_meta:
     date: true
-    category: true
-    tag: true
+    category: false
+    tag: false
 
 post:
   banner_img: /assets/banner.svg
-  banner_img_height: 42
-  banner_mask_alpha: 0.2
+  banner_img_height: 28
+  banner_mask_alpha: 0
   meta:
     author:
       enable: false
@@ -127,42 +127,47 @@ post:
       enable: true
       format: "YYYY-MM-DD"
     wordcount:
-      enable: true
+      enable: false
     min2read:
-      enable: true
+      enable: false
       awl: 2
       wpm: 60
   updated:
     enable: false
+  category_bar:
+    enable: false
+  toc:
+    enable: false
   copyright:
-    enable: true
-    license: BY-NC-SA
+    enable: false
+  prev_next:
+    enable: false
 
 archive:
   banner_img: /assets/banner.svg
-  banner_img_height: 34
-  banner_mask_alpha: 0.2
+  banner_img_height: 22
+  banner_mask_alpha: 0
 
 category:
   enable: true
   banner_img: /assets/banner.svg
-  banner_img_height: 34
-  banner_mask_alpha: 0.2
+  banner_img_height: 22
+  banner_mask_alpha: 0
 
 tag:
   enable: true
   banner_img: /assets/banner.svg
-  banner_img_height: 34
-  banner_mask_alpha: 0.2
+  banner_img_height: 22
+  banner_mask_alpha: 0
 
 about:
   enable: true
   banner_img: /assets/banner.svg
-  banner_img_height: 34
-  banner_mask_alpha: 0.2
+  banner_img_height: 22
+  banner_mask_alpha: 0
   avatar: /assets/avatar.jpg
-  name: "谭天晔 · Tianye Tan"
-  intro: "Computer Science @ ShanghaiTech · Class of 2029"
+  name: "谭天晔"
+  intro: "Tianye Tan · 上海科技大学计算机科学本科生"
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/tty627", tip: "GitHub" }
     - { class: "iconfont icon-mail", link: "mailto:ttyinzg@gmail.com", tip: "Gmail" }
@@ -170,8 +175,8 @@ about:
 
 page:
   banner_img: /assets/banner.svg
-  banner_img_height: 34
-  banner_mask_alpha: 0.2
+  banner_img_height: 22
+  banner_mask_alpha: 0
 
 page404:
   enable: true
