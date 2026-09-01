@@ -94,7 +94,7 @@ open_graph:
   twitter_card: summary
 
 footer:
-  content: '<div class="fluid-footer-shell"><span>© 2026 Tianye Tan</span><nav aria-label="页脚链接"><a href="/about/">关于</a><a href="https://github.com/tty627" target="_blank" rel="noopener">GitHub</a><a href="mailto:ttyinzg@gmail.com">Email</a></nav></div>'
+  content: '<div class="fluid-footer-shell"><span>© 2026 Tianye Tan</span><nav aria-label="页脚链接"><a href="/about/">关于</a><a href="/files/tianye-tan-resume.pdf" target="_blank" rel="noopener">简历</a><a href="https://github.com/tty627" target="_blank" rel="noopener">GitHub</a><a href="mailto:ttyinzg@gmail.com">Email</a></nav></div>'
   statistics:
     enable: false
   beian:
@@ -167,7 +167,7 @@ about:
   banner_mask_alpha: 0
   avatar: /assets/avatar.jpg
   name: "谭天晔"
-  intro: "Tianye Tan · 上海科技大学计算机科学本科生"
+  intro: "上海科技大学计算机本科生 · LLM Agent 评测与开发工具"
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/tty627", tip: "GitHub" }
     - { class: "iconfont icon-mail", link: "mailto:ttyinzg@gmail.com", tip: "Gmail" }

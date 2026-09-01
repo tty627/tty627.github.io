@@ -57,10 +57,20 @@ sitemap: false
   <main id="main" class="projects-page">
     <header class="projects-intro shell">
       <h1>项目</h1>
-      <p>这里列出我的公开仓库。点击项目名称可以查看代码和完整说明。</p>
+      <p>这里列出我的公开仓库。每个项目只做简短介绍，点击名称可以查看代码和完整说明。</p>
     </header>
 
     <section class="repository-list shell" aria-label="GitHub 仓库">
+      <article class="repository-item">
+        <h2><a href="https://github.com/tty627/rubrics" target="_blank" rel="noopener">rubrics</a></h2>
+        <p>一套 rubric（评分标准）工作流，把生成、诊断、冻结后实测、区分度分析、反馈修订和发布检查拆成独立阶段。候选回答只在 rubric 冻结后进入测试。</p>
+      </article>
+
+      <article class="repository-item">
+        <h2><a href="https://github.com/tty627/ai-airlock" target="_blank" rel="noopener">ai-airlock</a></h2>
+        <p>一个本地 AI 上下文安全工具，用来发现 Secret 和 Prompt Injection 风险、隔离不可信内容，并生成保留来源记录的 Safe Context Capsule。</p>
+      </article>
+
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/octopus" target="_blank" rel="noopener">Octopus</a></h2>
         <p>面向学习和研究的 Windows 本地资料工具。它能搜索 PDF、Office、图片、文本和 ZIP，并把结果定位到原文位置，方便核对和整理引用。</p>
@@ -68,7 +78,7 @@ sitemap: false
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/llm-relay-auditor" target="_blank" rel="noopener">Relay Model Auditor</a></h2>
-        <p>一个用于检查 OpenAI 兼容 API 的本地工具。它会保存测试结果和历史记录，帮助比较不同端点；现阶段不能仅凭结果断定实际模型身份。</p>
+        <p>保存 OpenAI 兼容端点的测试结果、证据哈希和历史记录，帮助整理与比较探索性证据；结果不能用于确认实际模型身份。</p>
       </article>
 
       <article class="repository-item">
@@ -83,7 +93,7 @@ sitemap: false
 
       <article class="repository-item">
         <h2><a href="https://github.com/tty627/pintos" target="_blank" rel="noopener">Pintos</a></h2>
-        <p>参与完成的操作系统课程项目，内容包括线程调度、系统调用、虚拟内存和文件系统。</p>
+        <p>操作系统课程项目，内容包括线程调度、priority donation、系统调用、虚拟内存和文件系统。</p>
       </article>
 
       <article class="repository-item">
@@ -122,6 +132,7 @@ sitemap: false
     <p>© 2026 Tianye Tan</p>
     <nav class="footer-links" aria-label="页脚链接">
       <a href="/about/">关于</a>
+      <a href="/files/tianye-tan-resume.pdf" target="_blank" rel="noopener">简历</a>
       <a href="https://github.com/tty627" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:ttyinzg@gmail.com">Email</a>
     </nav>
