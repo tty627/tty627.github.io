@@ -361,6 +361,23 @@ button:focus-visible {
   font-size: 15px;
 }
 
+.internship-projects {
+  min-width: 0;
+}
+
+.internship-project + .internship-project {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.internship-project h4 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 620;
+  line-height: 1.5;
+}
+
 .note-card {
   display: grid;
   grid-template-columns: 112px minmax(0, 1fr);
@@ -428,6 +445,12 @@ button:focus-visible {
   font-size: 24px;
   font-weight: 650;
   letter-spacing: -0.025em;
+}
+
+.project-group-intro {
+  margin: -8px 0 24px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 .project-copy,
@@ -542,6 +565,10 @@ code {
 
   .note-date {
     padding-top: 0;
+  }
+
+  .internship-projects {
+    margin-top: 12px;
   }
 
   .projects-intro {

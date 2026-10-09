@@ -19,17 +19,21 @@ description: 谭天晔，上海科技大学计算机科学与技术专业大二�
 
 `2026.08—2026.09`
 
-实习期间，我基于 [AgentCompass](https://github.com/open-compass/AgentCompass) 和 [Terminal-Bench 2.1 Verified](https://github.com/harbor-framework/terminal-bench-2-1) 参与 Agentic Instruction Following 评测。这里的核心问题不只是任务能否完成，还包括 Agent 是否遵守了指定的执行过程。
+这段实习中，我先后参与了以下两个项目。
+
+#### 项目一：Rubric Pipeline
+
+我把评分标准的生成、冻结后实测、区分度诊断、反馈修订和发布检查整理成一套[公开工作流](https://github.com/tty627/rubrics)。每轮先固定评分标准，再进行测试和诊断；根据反馈修订后，进入下一轮验证，并保留各阶段的记录。
+
+#### 项目二：基于 AgentCompass 的指令遵循评测
+
+我基于 [AgentCompass](https://github.com/open-compass/AgentCompass) 和 [Terminal-Bench 2.1 Verified](https://github.com/harbor-framework/terminal-bench-2-1) 参与 Agentic Instruction Following 评测。这里的核心问题不只是任务能否完成，还包括 Agent 是否遵守了指定的执行过程。
 
 具体工作包括：
 
 - 将过程约束加入原任务，并用多个模型检查约束的难度与区分度；
 - 为新增约束编写独立 verifier；
 - 结合完整运行轨迹、原任务结果与约束判定，形成自动化评测结果。
-
-### Rubric Pipeline｜实习成果
-
-这是我在浦江实验室实习期间完成的工作。我把评分标准的生成、冻结后实测、区分度诊断、反馈修订和发布检查整理成一套[公开工作流](https://github.com/tty627/rubrics)。每轮先固定评分标准，再进行测试和诊断；根据反馈修订后，进入下一轮验证，并保留各阶段的记录。
 
 ## 代表项目
 
