@@ -4,7 +4,8 @@
 
 站点采用混合结构：
 
-- 根路径 `/` 是面向作品展示的定制静态首页；
+- 根路径 `/` 展示个人介绍、精选项目（Octopus、AI Airlock、Pintos）和实习经历；
+- `/projects/` 按精选项目、实习成果、开发探索和课程作品整理公开仓库；
 - About 页面由 Hexo + Fluid 生成；当前没有已发布文章，首页及导航不展示文章入口；
 - GitHub Actions 在 PR 中执行完整检查，在 `main` push 后发布到 `gh-pages`。
 

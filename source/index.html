@@ -1,7 +1,7 @@
 ---
 layout: false
 title: 谭天晔 · Tianye Tan
-description: 上海科技大学计算机本科生，近期在浦江实验室参与大模型 Agent 评测，个人项目聚焦 Agent 安全、本地研究工具与系统工程。
+description: 谭天晔，上海科技大学计算机科学与技术专业大二学生。项目涉及本地研究工具、AI Agent 上下文处理与计算机系统。
 sitemap: false
 ---
 <!doctype html>
@@ -11,11 +11,11 @@ sitemap: false
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#11110f" media="(prefers-color-scheme: dark)">
-  <meta name="description" content="上海科技大学计算机本科生，近期在浦江实验室参与大模型 Agent 评测，个人项目聚焦 Agent 安全、本地研究工具与系统工程。">
+  <meta name="description" content="谭天晔，上海科技大学计算机科学与技术专业大二学生。项目涉及本地研究工具、AI Agent 上下文处理与计算机系统。">
   <meta name="author" content="Tianye Tan">
   <meta property="og:type" content="website">
   <meta property="og:title" content="谭天晔 · Tianye Tan">
-  <meta property="og:description" content="上海科技大学计算机本科生，近期在浦江实验室参与大模型 Agent 评测，个人项目聚焦 Agent 安全、本地研究工具与系统工程。">
+  <meta property="og:description" content="谭天晔，上海科技大学计算机科学与技术专业大二学生。项目涉及本地研究工具、AI Agent 上下文处理与计算机系统。">
   <meta property="og:url" content="https://tty627.github.io/">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary">
@@ -73,13 +73,64 @@ sitemap: false
       <div class="hero-copy">
         <h1 id="hero-title">谭天晔</h1>
         <p class="hero-name-en">Tianye Tan</p>
-        <p class="hero-intro">上海科技大学计算机本科生。近期在浦江实验室参与大模型 Agent 评测，个人项目主要围绕 Agent 安全、本地研究工具和系统工程。</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="/files/tianye-tan-resume.pdf" target="_blank" rel="noopener">查看简历 <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="/projects/">查看项目 <span aria-hidden="true">→</span></a>
-        </div>
+        <p class="hero-intro">上海科技大学计算机科学与技术专业大二学生。</p>
+        <p class="hero-summary">我通过课程、实习和个人项目学习人工智能与计算机系统，近期的工作包括本地研究工具、AI Agent 上下文处理和大模型评测。</p>
+        <nav class="hero-links" aria-label="个人资料与联系方式">
+          <a href="/files/tianye-tan-resume.pdf" target="_blank" rel="noopener">简历 PDF <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tty627" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="mailto:ttyinzg@gmail.com">Email <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section shell" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <h2 id="work-title">精选项目</h2>
+        <a class="text-link" href="/projects/">全部项目 →</a>
       </div>
 
+      <div class="home-project-list">
+        <article class="home-project">
+          <div class="home-project-heading">
+            <h3><a href="https://github.com/tty627/octopus" target="_blank" rel="noopener">Octopus</a></h3>
+            <p class="home-project-meta">本地资料工作台 · Windows 开发预览版</p>
+          </div>
+          <div class="project-copy">
+            <p>面向学习与研究的本地资料工作台，支持检索 PDF、Office、图片和 ZIP，并定位到可核对的原文位置。将确认过的证据整理为研究资料包，支持引用编辑与导出。</p>
+            <nav class="project-links" aria-label="Octopus 相关链接">
+              <a href="https://github.com/tty627/octopus" target="_blank" rel="noopener">代码与说明 ↗</a>
+              <a href="https://github.com/tty627/octopus/releases/tag/v2.1.0.dev1" target="_blank" rel="noopener">下载开发预览版 ↗</a>
+            </nav>
+          </div>
+        </article>
+        <article class="home-project">
+          <div class="home-project-heading">
+            <h3><a href="https://github.com/tty627/ai-airlock" target="_blank" rel="noopener">AI Airlock</a></h3>
+            <p class="home-project-meta">AI Agent · 本地上下文处理</p>
+          </div>
+          <div class="project-copy">
+            <p>在本地检测并处理敏感信息和可疑指令，为 AI Agent 筛选与任务相关的内容。输出附带来源的上下文，并通过独立检查与审计记录追踪处理结果。</p>
+            <nav class="project-links" aria-label="AI Airlock 相关链接">
+              <a href="https://github.com/tty627/ai-airlock" target="_blank" rel="noopener">代码与说明 ↗</a>
+              <a href="https://github.com/tty627/ai-airlock/blob/main/docs/claims-ledger.md" target="_blank" rel="noopener">验证记录 ↗</a>
+            </nav>
+          </div>
+        </article>
+        <article class="home-project">
+          <div class="home-project-heading">
+            <h3><a href="https://github.com/tty627/pintos" target="_blank" rel="noopener">Pintos</a></h3>
+            <p class="home-project-meta">操作系统 · C · 双人课程项目</p>
+          </div>
+          <div class="project-copy">
+            <p>基于 Pintos 教学框架完成的操作系统课程项目。我的提交主要涉及可扩展文件系统、目录与块缓存实现，以及虚拟内存并发问题的修复。</p>
+            <nav class="project-links" aria-label="Pintos 相关链接">
+              <a href="https://github.com/tty627/pintos" target="_blank" rel="noopener">代码与说明 ↗</a>
+              <a href="https://github.com/tty627/pintos/commit/160e9eacb1f138a267f92f0e209e7edd562af51d" target="_blank" rel="noopener">文件系统贡献 ↗</a>
+              <a href="https://github.com/tty627/pintos/commit/60a6837b018a3930d0c9cb6d4c371faa70d52d16" target="_blank" rel="noopener">并发修复 ↗</a>
+            </nav>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="section shell" id="experience" aria-labelledby="experience-title">
@@ -94,48 +145,22 @@ sitemap: false
             <h3>浦江实验室</h3>
             <p class="home-project-meta">大模型评测实习生 · 2026.08—2026.09</p>
           </div>
-          <p>基于 AgentCompass 与 Terminal-Bench 2.1 Verified 参与 Agentic Instruction Following 评测：使用多个模型检查约束的难度和区分度，为新增约束编写独立 verifier，并结合完整运行轨迹、原任务结果与约束判定形成自动化评测结果。</p>
+          <p>基于 AgentCompass 与 Terminal-Bench 2.1 Verified 参与 Agent 指令遵循评测。使用多个模型检查任务约束的难度与区分度，编写独立验证器，并结合运行轨迹、任务结果和约束判定形成评测结果。</p>
         </article>
         <article class="home-project">
           <div class="home-project-heading">
-            <h3><a href="https://github.com/tty627/rubrics" target="_blank" rel="noopener">Rubric Generate Pipeline</a></h3>
-            <p class="home-project-meta">浦江实验室实习内容</p>
+            <h3><a href="https://github.com/tty627/rubrics" target="_blank" rel="noopener">Rubric Pipeline</a></h3>
+            <p class="home-project-meta">浦江实验室实习成果 · 评分标准生成与评测</p>
           </div>
-          <p>在实习中把评分标准的生成、冻结后实测、区分度诊断、反馈修订和发布检查拆成清晰步骤；候选回答只在评分标准冻结后进入测试。</p>
+          <div class="project-copy">
+            <p>参与大模型评分标准生成与评测流程建设，将生成、冻结后实测、反馈修订和交付拆分为可追踪的阶段，并记录答案分歧、复核证据与残留问题。</p>
+            <nav class="project-links" aria-label="Rubric Pipeline 相关链接">
+              <a href="https://github.com/tty627/rubrics" target="_blank" rel="noopener">公开工作流 ↗</a>
+            </nav>
+          </div>
         </article>
       </div>
     </section>
-
-    <section class="section shell" id="work" aria-labelledby="work-title">
-      <div class="section-heading">
-        <h2 id="work-title">项目</h2>
-        <a class="text-link" href="/projects/">全部项目 →</a>
-      </div>
-
-      <div class="home-project-list">
-        <article class="home-project">
-          <h3><a href="https://github.com/tty627/ai-airlock" target="_blank" rel="noopener">AI Airlock</a></h3>
-          <p>在本地检测 Secret 和 Prompt Injection 风险，隔离不可信内容，筛选与任务有关的上下文，并生成保留来源记录的 Safe Context Capsule。</p>
-        </article>
-        <article class="home-project">
-          <h3><a href="https://github.com/tty627/octopus" target="_blank" rel="noopener">Octopus</a></h3>
-          <p>面向学习和研究的 Windows 本地资料工具，可以搜索 PDF、Office、图片、文本和 ZIP，并定位到原文位置。</p>
-        </article>
-        <article class="home-project">
-          <h3><a href="https://github.com/tty627/dsh-trajectory-control" target="_blank" rel="noopener">DSH Trajectory Control</a></h3>
-          <p>支持从 Agent 运行轨迹的中间步骤创建分支、加入新指令并继续运行。</p>
-        </article>
-        <article class="home-project">
-          <h3><a href="https://github.com/tty627/trajectory-workspace-plugin" target="_blank" rel="noopener">Trajectory Workspace Plugin</a></h3>
-          <p>为 DeepSeek Harness Web 增加可停靠、浮动、调整尺寸并保存会话布局的 Agent 轨迹面板。</p>
-        </article>
-        <article class="home-project">
-          <h3><a href="https://github.com/tty627/llm-relay-auditor" target="_blank" rel="noopener">Relay Model Auditor</a></h3>
-          <p>保存 OpenAI 兼容端点的测试结果和历史记录，帮助整理与比较探索性证据；结果不能用于确认实际模型身份。</p>
-        </article>
-      </div>
-    </section>
-
   </main>
 
   <footer class="footer shell">
