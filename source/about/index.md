@@ -47,8 +47,6 @@ description: 谭天晔，上海科技大学计算机科学与技术专业大二�
 
 [查看公开版简历（PDF）](/files/tianye-tan-resume.pdf)
 
-公开版已移除手机号。
-
 ## 联系方式
 
 - GitHub：<https://github.com/tty627>
