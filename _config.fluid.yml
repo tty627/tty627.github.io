@@ -68,7 +68,6 @@ navbar:
     alpha: 0.92
   menu:
     - { name: "项目", link: "/projects/", icon: "iconfont icon-code" }
-    - { name: "文章", link: "/notes/", icon: "iconfont icon-archive-fill" }
     - { name: "关于", link: "/about/", icon: "iconfont icon-user-fill" }
 
 search:
