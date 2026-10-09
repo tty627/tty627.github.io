@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11110f" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="谭天晔的公开项目与代码仓库。">
+  <meta name="author" content="Tianye Tan">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="项目 · Tianye Tan">
+  <meta property="og:description" content="谭天晔的公开项目与代码仓库。">
+  <meta property="og:url" content="https://tty627.github.io/projects/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://tty627.github.io/projects/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <title>项目 · Tianye Tan</title>
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem("Fluid_Color_Scheme") || localStorage.getItem("portfolio-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="主导航">
+      <a class="brand" href="/" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">TY</span>
+        <span class="brand-name">Tianye Tan</span>
+      </a>
+      <div class="nav-links">
+        <a href="/projects/" aria-current="page">项目</a>
+        <a href="/about/">关于</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换颜色主题">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="projects-page">
+    <header class="projects-intro shell">
+      <h1 id="项目">项目</h1>
+      <p>从本地资料工具、AI 工程到操作系统课程。这里按项目背景分组，保留代码、个人贡献和当前进度的入口。</p>
+    </header>
+
+    <section class="project-group repository-list shell" aria-labelledby="featured-title">
+      <h2 class="project-group-title" id="featured-title">精选项目</h2>
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/octopus" target="_blank" rel="noopener">Octopus</a></h3>
+        <div class="repository-copy">
+          <p>面向学习与研究的本地资料工作台。支持检索 PDF、Office、图片、文本和 ZIP，并定位到可核对的原文位置；可以整理证据、生成引用和导出研究资料包。</p>
+          <p>目前提供 Windows 开发预览版。</p>
+          <nav class="project-links" aria-label="Octopus 相关链接">
+            <a href="https://github.com/tty627/octopus/releases" target="_blank" rel="noopener">发布版本 ↗</a>
+          </nav>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/ai-airlock" target="_blank" rel="noopener">AI Airlock</a></h3>
+        <div class="repository-copy">
+          <p>面向 AI Agent 的本地上下文处理工具。在本地检测和处理敏感信息、可疑指令，筛选与任务相关的内容，并生成附带来源与审计记录的上下文。</p>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/pintos" target="_blank" rel="noopener">Pintos</a></h3>
+        <div class="repository-copy">
+          <p>基于 Pintos 教学框架完成的双人操作系统课程项目。我的提交涉及可扩展文件系统、目录与块缓存实现，以及虚拟内存并发问题修复。</p>
+          <nav class="project-links" aria-label="Pintos 个人贡献">
+            <a href="https://github.com/tty627/pintos/commit/160e9eacb1f138a267f92f0e209e7edd562af51d" target="_blank" rel="noopener">文件系统实现 ↗</a>
+            <a href="https://github.com/tty627/pintos/commit/60a6837b018a3930d0c9cb6d4c371faa70d52d16" target="_blank" rel="noopener">虚拟内存并发修复 ↗</a>
+          </nav>
+        </div>
+      </article>
+    </section>
+
+    <section class="project-group repository-list shell" aria-labelledby="internship-title">
+      <h2 class="project-group-title" id="internship-title">浦江实验室实习项目</h2>
+      <p class="project-group-intro">大模型评测实习生 · 2026.08—2026.09。以下是这段实习中先后参与的两个项目。</p>
+      <article class="repository-item">
+        <h3>项目一 · <a href="https://github.com/tty627/rubrics" target="_blank" rel="noopener">Rubric Pipeline</a></h3>
+        <div class="repository-copy">
+          <p>参与大模型评分标准生成与评测流程建设。将生成、冻结后实测、异源模型判分、区分度诊断和反馈修订拆分为可追踪的阶段，记录答案分歧与复核证据。</p>
+        </div>
+      </article>
+      <article class="repository-item">
+        <h3>项目二 · Agent 指令遵循评测</h3>
+        <div class="repository-copy">
+          <p>基于 AgentCompass 与 Terminal-Bench 2.1 Verified，为任务加入过程约束，用多个模型检查难度与区分度，编写独立验证器，并结合运行轨迹、任务结果和约束判定形成评测结果。</p>
+          <nav class="project-links" aria-label="Agent 指令遵循评测项目介绍">
+            <a href="/about/#实习经历">实习工作介绍 →</a>
+          </nav>
+        </div>
+      </article>
+    </section>
+
+    <section class="project-group repository-list shell" aria-labelledby="exploration-title">
+      <h2 class="project-group-title" id="exploration-title">开发与探索</h2>
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/BeforeTibo" target="_blank" rel="noopener">BeforeTibo</a></h3>
+        <div class="repository-copy">
+          <p>正在开发的 AI 任务编排工具，探索任务执行与独立验收的配合。目前处于 Alpha 阶段，真实 Codex 任务、账号绑定和额度集成仍未验证。</p>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3>DSH 轨迹工具扩展</h3>
+        <div class="repository-copy">
+          <p>为 DeepSeek Harness 扩展轨迹查看与控制能力：可停靠或浮动的轨迹面板、会话布局记忆，以及从指定步骤创建分支、加入新指令并继续运行。</p>
+          <nav class="project-links" aria-label="DSH 轨迹工具仓库">
+            <a href="https://github.com/tty627/trajectory-workspace-plugin" target="_blank" rel="noopener">轨迹面板 ↗</a>
+            <a href="https://github.com/tty627/dsh-trajectory-control" target="_blank" rel="noopener">分支控制 ↗</a>
+          </nav>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/llm-relay-auditor" target="_blank" rel="noopener">Relay Model Auditor</a></h3>
+        <div class="repository-copy">
+          <p>保存 OpenAI 兼容端点的测试结果、证据哈希和历史记录，帮助整理与比较探索性证据；结果不能用于确认实际模型身份。</p>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/MatchUs" target="_blank" rel="noopener">MatchUs</a></h3>
+        <div class="repository-copy">
+          <p>一个校园活动和临时组队的全栈应用原型，支持学校邮箱注册、活动发布与参与、签到、群聊、评价和举报。</p>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/crypto-quant" target="_blank" rel="noopener">crypto-quant</a></h3>
+        <div class="repository-copy">
+          <p>一个用 Python 写的加密货币永续合约回测项目，包含 Donchian 突破策略、多标的账户、参数搜索和图表输出。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="project-group repository-list shell" aria-labelledby="coursework-title">
+      <h2 class="project-group-title" id="coursework-title">课程与其他</h2>
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/CS100-Tank" target="_blank" rel="noopener">CS100 Tank</a></h3>
+        <div class="repository-copy">
+          <p>一个用 C 和 ANSI 终端渲染的坦克游戏课程作品，包含随机地图、可破坏墙体、敌方 AI 和生命、热量系统。</p>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/cs100-hw8-zombie" target="_blank" rel="noopener">CS100 Zombie</a></h3>
+        <div class="repository-copy">
+          <p>基于课程 PvZ 框架完成的反向玩法作业：玩家投放僵尸、使用阳光，逐关突破植物防线。运行时需要原课程工程模板。</p>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/tty627.github.io" target="_blank" rel="noopener">本站</a></h3>
+        <div class="repository-copy">
+          <p>这个个人网站的源代码，使用 Hexo 和定制页面，并通过 GitHub Actions 自动部署到 GitHub Pages。</p>
+        </div>
+      </article>
+
+      <article class="repository-item">
+        <h3><a href="https://github.com/tty627/llm-fingerprint-detector" target="_blank" rel="noopener">llm-fingerprint-detector（Fork）</a></h3>
+        <div class="repository-copy">
+          <p>从 ToseaAI 项目 fork 的 TypeScript 库和命令行工具，用单 token 输出分布比较 OpenAI 兼容端点。结果只能作为探索性参考，不能单独确认模型身份。</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© 2026 Tianye Tan</p>
+    <nav class="footer-links" aria-label="页脚链接">
+      <a href="/about/">关于</a>
+      <a href="/files/tianye-tan-resume.pdf" target="_blank" rel="noopener">简历</a>
+      <a href="https://github.com/tty627" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:ttyinzg@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+  <script src="/js/portfolio.js" defer></script>
+</body>
+</html>
