@@ -45,7 +45,7 @@ description: 谭天晔，上海科技大学计算机科学与技术专业大二�
 
 ## 简历
 
-[查看公开版简历（PDF）](/files/tianye-tan-resume.pdf)
+[查看个人简历（PDF）](/files/tianye-tan-resume.pdf)
 
 ## 联系方式
 
