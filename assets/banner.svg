@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Abstract evidence grid">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070c14"/>
+      <stop offset="0.58" stop-color="#13233a"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <radialGradient id="signal" cx="0" cy="0" r="1" gradientTransform="translate(1190 260) rotate(135) scale(510 430)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20b8a6" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#20b8a6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#a8b4c5" stroke-opacity="0.08"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#signal)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <g fill="none" stroke="#43d5c3" stroke-width="2">
+    <path d="M968 490h168l54-92h166" stroke-opacity="0.26"/>
+    <path d="M1040 570h184l76-130h144" stroke-opacity="0.14"/>
+    <circle cx="1190" cy="398" r="7" fill="#43d5c3" stroke="none"/>
+    <circle cx="1190" cy="398" r="24" stroke-opacity="0.22"/>
+    <circle cx="1190" cy="398" r="58" stroke-opacity="0.1"/>
+  </g>
+  <circle cx="1190" cy="398" r="12" fill="#43d5c3" opacity="0.45" filter="url(#glow)"/>
+  <circle cx="968" cy="490" r="5" fill="#d17a24"/>
+  <g fill="#dbe4ee" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="18" letter-spacing="4" opacity="0.36">
+    <text x="105" y="735">EVIDENCE / SYSTEMS / BOUNDARIES</text>
+    <text x="1260" y="175">TTY627</text>
+  </g>
+</svg>
