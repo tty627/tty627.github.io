@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1420" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="谭天晔的公开项目与代码仓库。">
+  <meta name="author" content="Tianye Tan">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="项目 · Tianye Tan">
+  <meta property="og:description" content="谭天晔的公开项目与代码仓库。">
+  <meta property="og:image" content="https://tty627.github.io/assets/avatar-github.jpg">
+  <meta property="og:url" content="https://tty627.github.io/projects/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://tty627.github.io/projects/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/avatar.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.min.css"></noscript>
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <title>项目 · Tianye Tan</title>
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem("Fluid_Color_Scheme") || localStorage.getItem("portfolio-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="sky-backdrop" id="sky-backdrop" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="主导航">
+      <a class="brand" href="/" aria-label="返回首页">
+        <span class="brand-emblem" aria-hidden="true">
+          <svg viewBox="0 0 28 28" width="22" height="22" fill="none">
+            <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.2"/>
+            <path d="M16.2 7.2a7 7 0 1 0 4.9 12A5.8 5.8 0 1 1 16.2 7.2Z" fill="var(--gold)"/>
+            <path d="M20 7.6l.65 1.75 1.75.65-1.75.65-.65 1.75-.65-1.75-1.75-.65 1.75-.65.65-1.75Z" fill="var(--sky)"/>
+          </svg>
+        </span>
+        <span class="brand-name">Tianye Tan</span>
+      </a>
+      <div class="nav-links">
+        <a href="/projects/" aria-current="page">项目</a>
+        <a href="/about/">关于</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换昼夜主题">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2.5v2M12 19.5v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2.5 12h2M19.5 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.2 14.8A8.2 8.2 0 1 1 9.2 3.8a6.6 6.6 0 0 0 11 11Z"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="projects-page">
+    <header class="projects-intro shell">
+      <p class="hero-eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        <span>Archive</span>
+      </p>
+      <h1 id="项目">项目</h1>
+      <p>过往的公开项目、上一段实习产出与课程仓库。</p>
+    </header>
+
+    <section class="project-group repository-list shell" aria-labelledby="featured-title">
+      <div class="section-title-group project-group-heading">
+        <span class="section-num" aria-hidden="true">01</span>
+        <h2 class="project-group-title" id="featured-title">代表项目</h2>
+      </div>
+      <div class="card-stack">
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/octopus" target="_blank" rel="noopener">Octopus</a></h3>
+            <div class="tag-row"><span class="tag">Windows</span><span class="tag">Search</span></div>
+          </div>
+          <div class="repository-copy">
+            <p>支持 PDF、Office、图片与 ZIP 检索及原文定位的本地工具，可整理证据并导出引用（Windows 预览版）。</p>
+            <nav class="project-links" aria-label="Octopus 相关链接">
+              <a href="https://github.com/tty627/octopus/releases" target="_blank" rel="noopener">发布版本 ↗</a>
+            </nav>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/ai-airlock" target="_blank" rel="noopener">AI Airlock</a></h3>
+            <div class="tag-row"><span class="tag">Security</span><span class="tag">Audit</span></div>
+          </div>
+          <div class="repository-copy">
+            <p>本地检测敏感信息与可疑指令，筛选任务相关上下文并生成来源与审计记录。</p>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/pintos" target="_blank" rel="noopener">Pintos</a></h3>
+            <div class="tag-row"><span class="tag">OS</span><span class="tag">C</span></div>
+          </div>
+          <div class="repository-copy">
+            <p>双人操作系统课程项目，负责可扩展文件系统、目录与块缓存实现，以及虚拟内存并发修复。</p>
+            <nav class="project-links" aria-label="Pintos 个人贡献">
+              <a href="https://github.com/tty627/pintos/commit/160e9eacb1f138a267f92f0e209e7edd562af51d" target="_blank" rel="noopener">文件系统实现 ↗</a>
+              <a href="https://github.com/tty627/pintos/commit/60a6837b018a3930d0c9cb6d4c371faa70d52d16" target="_blank" rel="noopener">虚拟内存并发修复 ↗</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-group repository-list shell" aria-labelledby="internship-title">
+      <div class="section-title-group project-group-heading">
+        <span class="section-num" aria-hidden="true">02</span>
+        <h2 class="project-group-title" id="internship-title">浦江实验室实习</h2>
+      </div>
+      <p class="project-group-intro">大模型评测实习生 · 2026.08—2026.09</p>
+      <div class="card-stack">
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/rubrics" target="_blank" rel="noopener">Rubric Pipeline</a></h3>
+            <div class="tag-row"><span class="tag">LLM Evaluation</span></div>
+          </div>
+          <div class="repository-copy">
+            <p>将评分标准生成、冻结实测、异源判分、区分度诊断与修订拆为可追踪阶段。</p>
+          </div>
+        </article>
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3>Agent 指令遵循评测</h3>
+            <div class="tag-row"><span class="tag">Benchmark</span></div>
+          </div>
+          <div class="repository-copy">
+            <p>基于 AgentCompass 与 Terminal-Bench 2.1 Verified，设计过程约束与独立验证器，结合轨迹自动化评测。</p>
+            <nav class="project-links" aria-label="Agent 指令遵循评测项目介绍">
+              <a href="/about/#实习经历">实习详情 →</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-group repository-list shell" aria-labelledby="exploration-title">
+      <div class="section-title-group project-group-heading">
+        <span class="section-num" aria-hidden="true">03</span>
+        <h2 class="project-group-title" id="exploration-title">开发与探索</h2>
+      </div>
+      <div class="card-stack">
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/BeforeTibo" target="_blank" rel="noopener">BeforeTibo</a></h3>
+          </div>
+          <div class="repository-copy">
+            <p>探索任务执行与独立验收配合的编排工具（Alpha）。</p>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3>DSH 轨迹工具扩展</h3>
+          </div>
+          <div class="repository-copy">
+            <p>为 DeepSeek Harness 扩展轨迹面板、布局记忆与指定步骤分支续跑。</p>
+            <nav class="project-links" aria-label="DSH 轨迹工具仓库">
+              <a href="https://github.com/tty627/trajectory-workspace-plugin" target="_blank" rel="noopener">轨迹面板 ↗</a>
+              <a href="https://github.com/tty627/dsh-trajectory-control" target="_blank" rel="noopener">分支控制 ↗</a>
+            </nav>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/llm-relay-auditor" target="_blank" rel="noopener">Relay Model Auditor</a></h3>
+          </div>
+          <div class="repository-copy">
+            <p>记录并对比 OpenAI 兼容端点的探索性测试证据与哈希历史。</p>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/MatchUs" target="_blank" rel="noopener">MatchUs</a></h3>
+          </div>
+          <div class="repository-copy">
+            <p>校园活动与临时组队全栈原型，含邮箱注册、签到、群聊与评价。</p>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/crypto-quant" target="_blank" rel="noopener">crypto-quant</a></h3>
+          </div>
+          <div class="repository-copy">
+            <p>Python 加密货币永续合约回测框架，含 Donchian 突破策略与参数搜索。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-group repository-list shell" aria-labelledby="coursework-title">
+      <div class="section-title-group project-group-heading">
+        <span class="section-num" aria-hidden="true">04</span>
+        <h2 class="project-group-title" id="coursework-title">课程与其他</h2>
+      </div>
+      <div class="card-stack">
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/CS100-Tank" target="_blank" rel="noopener">CS100 Tank</a></h3>
+          </div>
+          <div class="repository-copy">
+            <p>C + ANSI 终端渲染的坦克课程小游戏，含随机地图与敌方 AI。</p>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/cs100-hw8-zombie" target="_blank" rel="noopener">CS100 Zombie</a></h3>
+          </div>
+          <div class="repository-copy">
+            <p>基于课程 PvZ 框架的反向玩法作业，投放僵尸突破防线。</p>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/tty627.github.io" target="_blank" rel="noopener">本站</a></h3>
+          </div>
+          <div class="repository-copy">
+            <p>个人站点源码，Hexo + 定制页面，GitHub Actions 自动部署。</p>
+          </div>
+        </article>
+
+        <article class="glass-card repository-item">
+          <div class="card-aside">
+            <h3><a href="https://github.com/tty627/llm-fingerprint-detector" target="_blank" rel="noopener">llm-fingerprint-detector（Fork）</a></h3>
+          </div>
+          <div class="repository-copy">
+            <p>Fork 自 ToseaAI，基于单 token 分布对 OpenAI 兼容端点做探索性比对。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div class="footer-left">
+      <p>© 2026 Tianye Tan</p>
+      <button class="egg-chip" id="donut-egg" type="button" aria-label="触发甜甜圈与星光小彩蛋">
+        <svg viewBox="0 0 20 20" width="14" height="14" fill="none" aria-hidden="true">
+          <circle cx="10" cy="10" r="6.8" stroke="var(--gold)" stroke-width="2.4"/>
+          <circle cx="10" cy="10" r="2.2" fill="none" stroke="var(--sky)" stroke-width="1.2"/>
+        </svg>
+        <span>晴空与甜甜圈</span>
+      </button>
+    </div>
+    <nav class="footer-links" aria-label="页脚链接">
+      <a href="/">首页</a>
+      <a href="/about/">关于</a>
+      <a href="/files/tianye-tan-resume.pdf" target="_blank" rel="noopener">简历</a>
+      <a href="https://github.com/tty627" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:ttyinzg@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+  <div class="easter-toast" id="easter-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="/js/portfolio.js" defer></script>
+</body>
+</html>

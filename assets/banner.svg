@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" preserveAspectRatio="xMidYMin slice" role="img" aria-label="Serene anime sky backdrop">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cbe2f6"/>
+      <stop offset="0.34" stop-color="#dfeef9"/>
+      <stop offset="0.68" stop-color="#f3efe5"/>
+      <stop offset="1" stop-color="#f9f7f2"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="0.82" cy="0.24" r="0.46">
+      <stop offset="0" stop-color="#ffe7b0" stop-opacity="0.72"/>
+      <stop offset="0.48" stop-color="#f7dca3" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#f7dca3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bottomFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f9f7f2" stop-opacity="0"/>
+      <stop offset="0.6" stop-color="#f9f7f2" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#f9f7f2" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="640" fill="url(#sky)"/>
+  <rect width="1600" height="640" fill="url(#sunGlow)"/>
+  <circle cx="1310" cy="155" r="142" fill="none" stroke="#c8922d" stroke-opacity="0.2" stroke-width="1.2"/>
+  <circle cx="1310" cy="155" r="176" fill="none" stroke="#3b77ae" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="5 9"/>
+  <path d="M1324 114a34 34 0 1 0 24 58 28 28 0 1 1-24-58Z" fill="#e4b457" opacity="0.44"/>
+  <rect y="360" width="1600" height="280" fill="url(#bottomFade)"/>
+</svg>

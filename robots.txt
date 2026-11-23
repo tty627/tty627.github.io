@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tty627.github.io/sitemap.xml
