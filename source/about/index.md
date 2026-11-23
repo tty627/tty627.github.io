@@ -4,14 +4,14 @@ date: 2026-08-14 12:00:00
 updated: 2026-11-23 12:00:00
 layout: about
 comments: false
-description: 谭天晔，上科大 CS 大二，硅基流动开发实习中，空余时间打 Kaggle。
+description: 谭天晔，上科大 CS 大二，目前在硅基流动开发岗实习，最近痴迷于打 Kaggle，正在努力补齐 AI 时代的基础知识中。
 ---
 
 <h1 class="fluid-sr-only">关于</h1>
 
-**谭天晔（Tianye Tan / tty627）**，上海科技大学 CS 大二在读（2029 届）。
+**谭天晔（Tianye Tan / tty627）**，上科大 CS 大二（2029 届）。
 
-目前在 **硅基流动（SiliconFlow）** 做开发实习，空余时间打 **Kaggle**；此前在浦江实验室做过大模型评测实习。
+目前在 **硅基流动（SiliconFlow）** 开发岗实习，最近痴迷于打 **Kaggle**，正在努力补齐 AI 时代的基础知识中；此前在浦江实验室做过大模型评测实习。
 
 ## 实习经历
 
