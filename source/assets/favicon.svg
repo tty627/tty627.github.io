@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TY monogram">
-  <rect width="64" height="64" rx="16" fill="#181816"/>
-  <text x="32" y="40" fill="#f7f7f4" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="650" text-anchor="middle">TY</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tianye Tan emblem">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#192842"/>
+      <stop offset="1" stop-color="#0f1728"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7da92"/>
+      <stop offset="1" stop-color="#d89b32"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#85bcf0" stroke-opacity="0.24" stroke-width="1.2"/>
+  <path d="M36.5 17.5a15.2 15.2 0 1 0 10.6 26.1 12.6 12.6 0 1 1-10.6-26.1Z" fill="url(#gold)"/>
+  <path d="M44.5 18.5l1.35 3.65 3.65 1.35-3.65 1.35-1.35 3.65-1.35-3.65-3.65-1.35 3.65-1.35 1.35-3.65Z" fill="#9cd0ff"/>
 </svg>
